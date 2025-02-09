@@ -1,0 +1,21 @@
+[project]
+name = "uv-tensorrt-extradep-issue-mre"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12, <3.13"
+
+dependencies = ["attrs>=23.1.0"]
+
+[dependency-groups]
+macos = ["torch>=2.5.1 ; sys_platform == 'darwin'"]
+linux = ["torch>=2.5.1 ; sys_platform == 'linux'"]
+linux-gpu = ["onnxruntime-gpu>=1.16.0 ; sys_platform == 'linux'"]
+linux-cpu = ["onnxruntime>=1.16.0 ; sys_platform == 'linux'"]
+cuda = [
+    "nvidia-cuda-runtime-cu12 ; sys_platform == 'linux'",
+    "tensorrt>=10.7.0 ; sys_platform == 'linux'",
+    "tensorrt-cu12-bindings>=10.7.0 ; sys_platform == 'linux'",
+    "tensorrt-cu12-libs>=10.7.0 ; sys_platform == 'linux'",
+]
+
