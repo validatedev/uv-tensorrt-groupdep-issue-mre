@@ -1,5 +1,5 @@
 [project]
-name = "uv-tensorrt-extradep-issue-mre"
+name = "uv-tensorrt-groupdev-issue-mre"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -18,4 +18,3 @@ cuda = [
     "tensorrt-cu12-bindings>=10.7.0 ; sys_platform == 'linux'",
     "tensorrt-cu12-libs>=10.7.0 ; sys_platform == 'linux'",
 ]
-
